@@ -77,13 +77,19 @@ void draw() {
                        randR= random(0, 360);
                       rand = random(0, 255);
                 } else if(key == 'b') {
-                        text = "b";
+                        text = "§";
                         randR= random(0, 360);
                         rand = random(0, 255);
                 } else if(key == 'c') {
-                        text = "c";
+                        text = "¶";
                         randR= random(0, 360);
                         rand = random(0, 255);
+                } else if(key == '1') {
+                        frameRate(5);
+                } else if(key == '2') {
+                        frameRate(30);
+                } else if(key == '3') {
+                        frameRate(60);
                 }
         }
 }
