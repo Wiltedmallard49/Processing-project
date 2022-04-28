@@ -78,21 +78,8 @@ void draw() {
                 if(key == 'n') {
                         // Opens secret website when key is pressed
                         link("https://alt.org/nethack/hterm/");
-                        text = "Secret!";
                         randR = 123;
                         rand = 167;
-                } else if(key == 'a') {
-                        text = "@";
-                       randR= random(0, 360);
-                      rand = random(0, 255);
-                } else if(key == 'b') {
-                        text = "§";
-                        randR= random(0, 360);
-                        rand = random(0, 255);
-                } else if(key == 'c') {
-                        text = "¶";
-                        randR= random(0, 360);
-                        rand = random(0, 255);
                 } else if(key == '1') {
                         frameRate(5);
                 } else if(key == '2') {
