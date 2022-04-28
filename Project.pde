@@ -59,6 +59,18 @@ void draw() {
                         text = "Secret!";
                         randR = 123;
                         rand = 167;
+                } else if(key == 'a') {
+                        text = "@";
+                       randR= random(0, 360);
+                      rand = random(0, 255);
+                } else if(key == 'b') {
+                        text = "b";
+                        randR= random(0, 360);
+                        rand = random(0, 255);
+                } else if(key == 'c') {
+                        text = "c";
+                        randR= random(0, 360);
+                        rand = random(0, 255);
                 }
         }
 }
