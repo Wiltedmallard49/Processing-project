@@ -1,3 +1,4 @@
+//Initializing objects
 Star star;
 String text;
 String[] array = new String[5];
