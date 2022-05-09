@@ -1,7 +1,6 @@
 //Initializing objects
 Star star;
-String text;
-String[] array = new String[5];
+String[] text = new String[5];
 PImage img;
 
 // Sets important aspects
@@ -11,12 +10,11 @@ void setup() {
         frameRate(5);
         // Loads an image and sets a text string
         img = loadImage("egg.png");
-        text = "@";
-        array[0]="@";
-        array[1]="Ω";
-        array[2]="∆";
-        array[3]="≈";
-        array[4]="∞";
+        text[0]="@";
+        text[1]="Ω";
+        text[2]="∆";
+        text[3]="≈";
+        text[4]="∞";
         
 }
 
@@ -25,9 +23,11 @@ void draw() {
         colorMode(HSB, 255);
 
         // Initiates randomized values
-        int i = round(random(0,1)) * 255;
         int randA = (int) random(0,4);
         float rand = random(0, 255);
+        float randH = random(0, 360);
+        float randS = random(0, 360);
+        float randB = random(0, 360);
         float randR = random(0, 360);
         float randX = random(0, 640);
         float randY = random(0, 480);
@@ -37,7 +37,7 @@ void draw() {
         rotateZ(randR);
         rotateX(randR);
         rotateY(randR);
-        fill(rand, randR, randR);
+        fill(randH, randS, randB);
         rect(rand, rand, randX, randY);
 
         // Creates a star
@@ -45,7 +45,7 @@ void draw() {
         rotateZ(randR);
         rotateX(randR);
         rotateY(randR);
-        fill(randR, rand, randR);
+        fill(randB, randS, randH);
         star = new Star(randX, randY, rand, rand, (int) random(0, 10));
         star.display();
 
@@ -54,16 +54,16 @@ void draw() {
         rotateZ(randR);
         rotateX(randR);
         rotateY(randR);
-        fill(random(0, 360), randR, rand);
+        fill(randR, randH, ranS);
         textSize(128);
-        text(array[randA], randX, randX, randR);
+        text(text[randA], randX, randX, randR);
 
         // Creates an ellipse
         stroke(rand, rand, rand);
         rotateZ(randR);
         rotateX(randR);
         rotateY(randR);
-        fill(rand, randR, rand);
+        fill(randH, randS, randR);
         ellipse(randX, randY, rand, rand);
         
         // Displays an image
