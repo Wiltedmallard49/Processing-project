@@ -54,7 +54,7 @@ void draw() {
         rotateZ(randR);
         rotateX(randR);
         rotateY(randR);
-        fill(randR, randH, ranS);
+        fill(randR, randH, randS);
         textSize(128);
         text(text[randA], randX, randX, randR);
 
